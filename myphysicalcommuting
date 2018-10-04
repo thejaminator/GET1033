@@ -1,8 +1,23 @@
 ardudino
 sensor: accelerometer module for ardu
-when accele > threshold
+arc lighter -> electronically powered lighter
+hair spray as gas canister?
 
-ardu ---> activate gas canister and lighter --------> FIRE bender
 
+every 0.5 s -----> run function
+
+
+
+
+def makefire {
+  while accele > threshold
+    hairspray ()
+    switch()
+}
+
+
+
+OR maybe use a watergun instead if fire is too dangerous.
+https://www.hackster.io/engineering-is-easy/motion-sensor-water-gun-c0645c
 
 
