@@ -1,0 +1,8 @@
+ardudino
+sensor: accelerometer module for ardu
+when accele > threshold
+
+ardu ---> activate gas canister and lighter --------> FIRE bender
+
+
+
