@@ -9,6 +9,7 @@ Read the full story [here](https://averagefaces.wordpress.com/2018/11/16/the-res
 
 # Landmark creator
 scripts/landmark_creator.py 
+
 Requires shape_predictor_68_face_landmarks.dat to run, dlib. (google it). 
 To run, just input the directory of the photos. Will output .txt files required for makeaverage.py.
 
