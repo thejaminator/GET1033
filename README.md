@@ -5,6 +5,8 @@ This repo serves to create an average face of NUS students.
 <img src="https://averagefaces.files.wordpress.com/2018/11/50_females1.gif" alt="drawing" width="300"/>
 
 Read the full story [here](https://averagefaces.wordpress.com/2018/11/16/the-results/)
+Watch the video [here](https://www.youtube.com/watch?v=Ohfu2fE8yeo)
+
 
 # Workflow
 Office 365 scrapper and IVLE scrapper ---> sorter -----> landmark creator ------> average face creator
