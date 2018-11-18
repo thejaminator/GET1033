@@ -23,8 +23,11 @@ Adapted from [here](https://github.com/andrewjeminchoi/simple-face-average)
 scripts/makeaverage.py
 
 Requires opencv. To run, just input the directory of the photos. Requires pre-generated .txt files from the landmark creator. It will ask for the number of randomed sample photos. If you want to use all the photos in the directory, input "0".
+This script differs from the script from andrewjeminchoi's as instead of taking in all .jpg, it will find the .txt files and then file the corresponding .jpg file. This prevents the script crashing when a .jpg file does not have an accompanying .txt file.
 
 The resultant average image will be created in the current working directory with the filename of the parents, and the parent of the parent directory.
+
+Adapted from [here](https://github.com/andrewjeminchoi/simple-face-average)
 
 
 # IVLE scrapper
