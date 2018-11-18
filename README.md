@@ -6,6 +6,8 @@ This repo serves to create an average face of NUS students.
 
 Read the full story [here](https://averagefaces.wordpress.com/2018/11/16/the-results/)
 
+# Workflow
+Office 365 scrapper and IVLE scrapper ---> sorter -----> landmark creator ------> average face creator
 
 # Landmark creator
 scripts/landmark_creator.py 
@@ -29,7 +31,13 @@ scripts/ivle_scrapper.py
 Input the image url you would like to start bruteforce scrapping.
 
 # Office 365 scrapper
-scripts/office_sccrapper.py
+scripts/office_scrapper.py
 
 Uses table.csv to append the results of the scrapping. Requires the security token of a signed in session on Office 365 email.
+
+# Sorter
+scripts/sorter.py
+
+Input the directory of the scrapped pictures. Requires the table from the Office 365 scrapper to compare the NUSNET ID of the image files to the table, and sort them into respective faculties.
+
 
