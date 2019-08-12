@@ -1,10 +1,12 @@
 # GET1033
 
-This repo serves to create an average face of NUS students.
+"Hey man, that guy really has that biz kid vibes!"
+Ever wondered if we can tell a person's faculty from their face?
+This repo serves to create an average face of NUS students. Later I sort it according to faculty and try to build a predictive model to see if there are certain features that we can use to distinguish between faculties.
 
 <img src="https://averageface.files.wordpress.com/2018/11/50_females1.gif" alt="drawing" width="300"/>
 
-Read the full story [here](https://averageface.wordpress.com/2018/11/16/the-results/)
+Read the full story [here](https://averageface.wordpress.com/)
 Watch the video [here](https://www.youtube.com/watch?v=Ohfu2fE8yeo)
 
 
