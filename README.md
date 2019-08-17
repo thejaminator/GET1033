@@ -8,7 +8,7 @@ This repo serves to create an average face of NUS students. Later I sort it acco
 <img src="https://averageface.files.wordpress.com/2018/11/50_females1.gif" alt="drawing" width="300"/>
 
 Read the full story [here](https://averageface.wordpress.com/)
-Watch the video [here](https://www.youtube.com/watch?v=Ohfu2fE8yeo)
+
 
 
 # Workflow
