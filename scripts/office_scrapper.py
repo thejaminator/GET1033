@@ -10,7 +10,7 @@ if __name__ == '__main__' :
     'Accept': 'application/json',
     'Accept-Encoding': 'gzip',
     'Accept-Language': 'en-US',
-    'Authorization': input('paste token'),
+    'Authorization': input('paste token of webmail authorization'),
     'Client-Request-Id': 'WebSDK/1346633340',
     'Connection': 'keep-alive',
     'Host': 'webpoolsg20f15.infra.lync.com',
@@ -42,9 +42,9 @@ if __name__ == '__main__' :
                     data = json.loads(result.text)
                     department = (data['_embedded']['contact'][0]['department'])
                     name = (data['_embedded']['contact'][0]['name'])
-                    list = [fullid, name, department]
-                    table.append(list)
-                    print (list)
+                    student_info = [fullid, name, department]
+                    table.append(student_info)
+                    print (student_info)
                 except Exception:
                     errorcount += 1
                     print ('ERROR WITH ' + fullid + ' error count: ' + str(errorcount))

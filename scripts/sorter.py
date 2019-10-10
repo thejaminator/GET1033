@@ -38,6 +38,6 @@ if __name__ == '__main__' :
     pics_path = pathlib.PurePath(input("Input filepath of scrapped images"))
     copy_path = pathlib.PurePath(my_path, 'sorted_')
 
-    df =  pd.read_csv('clean.csv')
+    df =  pd.read_csv(input("Input filepath of csv file with columns id, name, department of students))
     df['id'] = df['id'].apply(lambda x: str(x).zfill(7))
     sort_files(df, pics_path, copy_path)
