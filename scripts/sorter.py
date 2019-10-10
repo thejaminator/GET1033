@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Oct 26 23:52:53 2018
-
+This sorts the scrapped images according to their faculty
 @author: James
 """
 
@@ -12,34 +12,32 @@ import shutil
 import pandas as pd
 
 
-my_path = Path().resolve()
-# =============================================================================
-# pics_path = pathlib.PurePath(my_path, 'pics')
-# =============================================================================
-pics_path = pathlib.PurePath(r'D:\Google drive sync\unilaptop\scrappedpics')
-copy_path = pathlib.PurePath(my_path, 'sorted2')
-
-df =  pd.read_csv('clean.csv')
-df['id'] = df['id'].apply(lambda x: str(x).zfill(7))
-df['department'].value_counts()
-
-
-def sortfile(filepath):
+def sort_files(df, scrapped_path, copy_path):
+    #create table to specify the sorted pictures
     table = pd.DataFrame(columns=['id','name','department'])
-    for root, dirs, files in os.walk(filepath):
+    for root, dirs, files in os.walk(scrapped_path):
         for file in files:
             if file.endswith(".jpg"):
                 try: 
-                    folder = (df.loc[df['id'] == file[1:8]]['department'].values[0])
+                    #the folder corresponds to the department of the student
+                    folder = (df[df['id'] == file[1:8]]['department'].values[0])
+                    #make the folder in the copy path
                     os.makedirs(pathlib.PurePath(copy_path, folder), exist_ok=True)
+                    #copy the photo over
                     path_file = pathlib.PurePath(root, file)
                     shutil.copy(path_file, pathlib.PurePath(copy_path, folder, file))
-                    row = (df.loc[df['id'] == file[1:8]])
-                    table = pd.concat([table,row])
+                    #add info 
+                    info = (df[df['id'] == file[1:8]])
+                    table = pd.concat([table,info])
                 except: 
                     print (file + ' not found in csv')
+    #output a file specifying the pictures that were able to be sorted
     table.to_csv('sortedpics.csv', index=False)
-sortfile(pics_path)
+if __name__ == '__main__' :
+    my_path = Path().resolve()
+    pics_path = pathlib.PurePath(input("Input filepath of scrapped images"))
+    copy_path = pathlib.PurePath(my_path, 'sorted_')
 
-table =  pd.read_csv('sortedpics.csv')
-table['department'].value_counts()
+    df =  pd.read_csv('clean.csv')
+    df['id'] = df['id'].apply(lambda x: str(x).zfill(7))
+    sort_files(df, pics_path, copy_path)

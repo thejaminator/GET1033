@@ -321,7 +321,6 @@ def make_image(path, samplesize):
     fontScale,
     fontColor,
     lineType)
-
     
     cv2.imwrite(filename,output)
 
