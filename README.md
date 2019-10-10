@@ -17,7 +17,7 @@ Office 365 scrapper and IVLE scrapper ---> sorter -----> landmark creator ------
 # Landmark creator
 scripts/landmark_creator.py 
 
-Requires shape_predictor_68_face_landmarks.dat to run, dlib. (google it). 
+Requires shape_predictor_68_face_landmarks.dat to run with contains the weights for landmark detection. Also, you need to install dlib
 To run, just input the directory of the photos. Will output .txt files required for makeaverage.py.
 
 Adapted from [here](https://github.com/andrewjeminchoi/simple-face-average)
@@ -36,7 +36,8 @@ Adapted from [here](https://github.com/andrewjeminchoi/simple-face-average)
 # IVLE scrapper
 scripts/ivle_scrapper.py
 
-Input the image url you would like to start bruteforce scrapping.
+Input the image url you would like to start bruteforce scrapping for face images.
+Update: not sure if IVLE has been totally deprecated which breaks this script.
 
 # Office 365 scrapper
 scripts/office_scrapper.py
