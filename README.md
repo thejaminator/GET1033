@@ -4,6 +4,7 @@
 Ever wondered if we can tell a person's faculty from their face?
 
 This repo serves to create an average face of NUS students. Later I sort it according to faculty and try to build a predictive model to test if there are certain features that we can use to distinguish between faculties.
+The scrapper may not work anymore - it was made around 1 year ago 
 
 <img src="https://averageface.files.wordpress.com/2018/11/50_females1.gif" alt="drawing" width="300"/>
 
